@@ -4,6 +4,7 @@
   "description": "Kaustubh Badrike's personal website",
   "main": "index.js",
   "scripts": {
+    "buildcss": "sass src/scss/main.scss src/css/style.css"
   },
   "repository": {
     "type": "git",
