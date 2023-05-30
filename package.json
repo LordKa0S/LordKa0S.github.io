@@ -4,7 +4,7 @@
   "description": "Kaustubh Badrike's personal website",
   "main": "index.js",
   "scripts": {
-    "buildcss": "sass --style=compressed ./scss:./css"
+    "compress": "postcss -r ./css "
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/LordKa0S/LordKa0S.github.io#readme",
   "devDependencies": {
-    "sass": "^1.62.1"
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0"
   }
 }
