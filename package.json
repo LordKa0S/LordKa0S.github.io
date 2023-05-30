@@ -1,0 +1,22 @@
+{
+  "name": "kmjb-website",
+  "version": "1.0.0",
+  "description": "Kaustubh Badrike's personal website",
+  "main": "index.js",
+  "scripts": {
+    "buildcss": "sass src/scss/main.scss src/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LordKa0S/LordKa0S.github.io.git"
+  },
+  "author": "Kaustubh Badrike (https://kmjb.dev/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LordKa0S/LordKa0S.github.io/issues"
+  },
+  "homepage": "https://github.com/LordKa0S/LordKa0S.github.io#readme",
+  "devDependencies": {
+    "sass": "^1.62.1"
+  }
+}
