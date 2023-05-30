@@ -4,7 +4,7 @@
   "description": "Kaustubh Badrike's personal website",
   "main": "index.js",
   "scripts": {
-    "compress": "postcss -r ./css "
+    "compress": "postcss ./css/!(*.min.css) --dir ./css --ext min.css"
   },
   "repository": {
     "type": "git",
