@@ -4,7 +4,12 @@
   "description": "Kaustubh Badrike's personal website",
   "main": "index.js",
   "scripts": {
-    "compress": "postcss ./css/!(*.min.css) --dir ./css --ext min.css"
+    "minifyCss": "postcss ./css --dir ./dist --ext min.css",
+    "watchMinifyCss": "postcss -w ./css --dir ./dist --ext min.css",
+    "minifyHtml": "html-minifier index.html -o ./dist/index.html",
+    "minify": "npm run minifyHtml && npm run minifyCss",
+    "imgAssets": "cp ./img ./dist/img",
+    "build": "npm run imgAssets && npm run build"
   },
   "repository": {
     "type": "git",
@@ -18,6 +23,7 @@
   "homepage": "https://github.com/LordKa0S/LordKa0S.github.io#readme",
   "devDependencies": {
     "cssnano": "^6.0.1",
+    "html-minifier": "^4.0.0",
     "postcss": "^8.4.24",
     "postcss-cli": "^10.1.0"
   }
