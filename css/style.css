@@ -29,9 +29,38 @@ header {
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        box-sizing: border-box;
     }
 
     & aside {
         font-size: larger;
+    }
+}
+
+.content {
+    @media screen and (max-width: 576px) {
+        --spacing: 2em;
+        padding-left: var(--spacing);
+        padding-right: var(--spacing);
+    }
+
+    @media screen and (min-width: 576px) {
+        max-width: 544px;
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 720px;
+    }
+
+    @media screen and (min-width: 992px) {
+        max-width: 960px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 1136px;
+    }
+
+    @media screen and (min-width: 1400px) {
+        max-width: 1320px;
     }
 }
