@@ -32,6 +32,11 @@ header {
         box-sizing: border-box;
     }
 
+    & dark-mode-toggle {
+        position: relative;
+        top: 4px;
+    }
+
     & aside {
         font-size: larger;
     }
