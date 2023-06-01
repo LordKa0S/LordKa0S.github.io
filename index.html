@@ -19,12 +19,23 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="dark.min.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="light.min.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="style.min.css">
+    <link rel="stylesheet" href="https://googlechromelabs.github.io/dark-mode-toggle/demo/slider.css">
+    <script type="module" src="https://unpkg.com/dark-mode-toggle@0.14.6/dist/dark-mode-toggle.min.mjs"></script>
     <title>Kaustubh Badrike | KMJB</title>
 </head>
 
 <body>
-
+    <header>
+        <div class="content">
+            <aside>KMJB</aside>
+            <dark-mode-toggle class="slider" appearance="toggle"></dark-mode-toggle>
+        </div>
+    </header>
+    <main class="content">
+    </main>
 </body>
 
 </html>
