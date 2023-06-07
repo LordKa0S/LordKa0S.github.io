@@ -1,3 +1,13 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 body {
     background-color: var(--background-color);
     font-family: 'Roboto', sans-serif;
@@ -9,37 +19,6 @@ body {
 
 main {
     width: 100%;
-}
-
-header {
-    height: 48px;
-    border-bottom: thin solid var(--edge-color);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: sticky;
-    top: 0px;
-    background-color: inherit;
-    opacity: 0.85;
-
-    >.content {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    & dark-mode-toggle {
-        position: relative;
-        top: 4px;
-    }
-
-    & aside {
-        font-size: larger;
-    }
 }
 
 .content {
@@ -67,5 +46,71 @@ header {
 
     @media screen and (min-width: 1400px) {
         max-width: 1320px;
+    }
+}
+
+header {
+    height: 48px;
+    border-bottom: thin solid var(--edge-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    background-color: inherit;
+    opacity: 0.85;
+
+    >.content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    & dark-mode-toggle {
+        position: relative;
+        top: 4px;
+    }
+
+    & aside {
+        font-size: larger;
+    }
+}
+
+a {
+    color: var(--font-color);
+
+    &:hover {
+        opacity: 0.66;
+    }
+}
+
+.profile {
+    height: 100vh;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+
+    .face {
+        --size: 256px;
+        width: var(--size);
+        aspect-ratio: 1;
+        border-radius: calc(0.5 * var(--size));
+    }
+
+    .profession {
+        font-weight: 300;
+        font-size: smaller;
+    }
+
+    .accounts {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
     }
 }
