@@ -1,0 +1,175 @@
+html {
+    box-sizing: border-box;
+    --scrollbar-thumb-size: 8px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Roboto', sans-serif;
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: var(--scrollbar-thumb-size);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: var(--edge-color);
+    border-radius: calc(var(--scrollbar-thumb-size) / 2);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: gray;
+}
+
+.content {
+    @media screen and (max-width: 576px) {
+        --spacing: 2em;
+        padding-left: var(--spacing);
+        padding-right: var(--spacing);
+    }
+
+    @media screen and (min-width: 576px) {
+        max-width: 544px;
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 720px;
+    }
+
+    @media screen and (min-width: 992px) {
+        max-width: 960px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 1136px;
+    }
+
+    @media screen and (min-width: 1400px) {
+        max-width: 1320px;
+    }
+}
+
+header {
+    height: 48px;
+    border-bottom: thin solid var(--edge-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    background-color: inherit;
+    opacity: 0.85;
+
+    .initials {
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    >.content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .resume {
+        vertical-align: middle;
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48
+    }
+
+    & dark-mode-toggle {
+        position: relative;
+        top: 0.25rem;
+    }
+
+    & aside {
+        font-size: larger;
+    }
+}
+
+a {
+    color: var(--font-color);
+
+    &:hover {
+        opacity: 0.66;
+    }
+}
+
+.profile {
+    height: 100vh;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+
+    .person {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .face {
+        --size: 256px;
+        width: var(--size);
+        aspect-ratio: 1;
+        border-radius: calc(0.5 * var(--size));
+    }
+
+    .profession {
+        font-weight: 300;
+        font-size: smaller;
+        text-align: center;
+    }
+
+    .accounts {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+
+        .icon {
+            height: 1em;
+
+            & path {
+                fill: currentColor;
+            }
+        }
+    }
+}

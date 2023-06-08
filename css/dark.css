@@ -1,0 +1,7 @@
+@import "constants.min.css";
+
+:root {
+    --background-color: var(--primary-dark);
+    --font-color: var(--primary-light);
+    --edge-color: dimgray;
+}

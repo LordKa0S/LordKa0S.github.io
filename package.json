@@ -1,0 +1,32 @@
+{
+  "name": "kmjb-website",
+  "version": "1.0.0",
+  "description": "Kaustubh Badrike's personal website",
+  "main": "index.js",
+  "scripts": {
+    "minifyCss": "postcss ./css --dir ./dist --ext min.css",
+    "watchMinifyCss": "postcss -w ./css --dir ./dist --ext min.css",
+    "minifyHtml": "html-minifier index.html -o ./dist/index.html --collapse-whitespace --collapse-inline-tag-whitespace --conservative-collapse --remove-attribute-quotes --remove-comments --remove-redundant-attributes",
+    "minify": "npm run minifyHtml && npm run minifyCss",
+    "imgAssetsPwsh": "robocopy ./img ./dist/img /e",
+    "imgAssetsLinux": "cp ./img ./dist/img",
+    "buildPwsh": "npm run minify && npm run imgAssetsPwsh",
+    "build": "npm run minify && npm run imgAssetsLinux"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LordKa0S/LordKa0S.github.io.git"
+  },
+  "author": "Kaustubh Badrike (https://kmjb.dev/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LordKa0S/LordKa0S.github.io/issues"
+  },
+  "homepage": "https://github.com/LordKa0S/LordKa0S.github.io#readme",
+  "devDependencies": {
+    "cssnano": "^6.0.1",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0"
+  }
+}
