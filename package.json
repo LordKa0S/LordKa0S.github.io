@@ -9,7 +9,7 @@
     "minifyHtml": "html-minifier index.html -o ./dist/index.html --collapse-whitespace --collapse-inline-tag-whitespace --conservative-collapse --remove-attribute-quotes --remove-comments --remove-redundant-attributes",
     "minify": "npm run minifyHtml && npm run minifyCss",
     "imgAssetsPwsh": "robocopy ./img ./dist/img /e",
-    "imgAssetsLinux": "cp ./img ./dist/img",
+    "imgAssetsLinux": "cp -R ./img ./dist/img",
     "refreshPwsh": "mkdir dist -Force",
     "refreshLinux": "mkdir -p dist",
     "buildPwsh": "npm run refreshPwsh && npm run minify && npm run imgAssetsPwsh",
