@@ -139,6 +139,13 @@ a {
     justify-content: center;
     gap: 1em;
 
+    .person {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
     .face {
         --size: 256px;
         width: var(--size);
