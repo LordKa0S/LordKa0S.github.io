@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    --scrollbar-thumb-size: 8px;
 }
 
 *,
@@ -19,6 +20,27 @@ body {
 
 main {
     width: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: var(--scrollbar-thumb-size);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: var(--edge-color);
+    border-radius: calc(var(--scrollbar-thumb-size) / 2);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: gray;
 }
 
 .content {
