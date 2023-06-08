@@ -96,9 +96,25 @@ header {
         width: 100%;
     }
 
+    .right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .resume {
+        vertical-align: middle;
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48
+    }
+
     & dark-mode-toggle {
         position: relative;
-        top: 4px;
+        top: 0.25rem;
     }
 
     & aside {
