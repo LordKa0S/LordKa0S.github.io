@@ -10,8 +10,10 @@
     "minify": "npm run minifyHtml && npm run minifyCss",
     "imgAssetsPwsh": "robocopy ./img ./dist/img /e",
     "imgAssetsLinux": "cp ./img ./dist/img",
-    "buildPwsh": "npm run minify && npm run imgAssetsPwsh",
-    "build": "npm run minify && npm run imgAssetsLinux"
+    "refreshPwsh": "mkdir dist -Force",
+    "refreshLinux": "mkdir -p dist",
+    "buildPwsh": "npm run refreshPwsh && npm run minify && npm run imgAssetsPwsh",
+    "build": "npm run refreshLinux && npm run minify && npm run imgAssetsLinux"
   },
   "repository": {
     "type": "git",
