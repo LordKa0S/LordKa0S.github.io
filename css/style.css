@@ -156,6 +156,7 @@ a {
     .profession {
         font-weight: 300;
         font-size: smaller;
+        text-align: center;
     }
 
     .accounts {
