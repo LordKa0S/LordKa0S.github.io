@@ -23,8 +23,6 @@
     <link rel="stylesheet" href="light.min.css" media="(prefers-color-scheme: light)">
     <link rel="stylesheet" href="style.min.css">
     <link rel="stylesheet" href="https://googlechromelabs.github.io/dark-mode-toggle/demo/slider.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script type="module" src="https://unpkg.com/dark-mode-toggle@0.14.6/dist/dark-mode-toggle.min.mjs"></script>
     <title>Kaustubh Badrike | KMJB</title>
 </head>
@@ -35,9 +33,11 @@
             <aside class="initials">KMJB</aside>
             <aside class="right">
                 <a href="https://resume.kmjb.dev/" target="_blank" rel="noopener noreferrer">
-                    <span class="material-symbols-outlined resume" title="Résumé">
-                        contact_page
-                    </span>
+                    <!-- https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Acontact_page%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048 -->
+                    <svg class="icon resume" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                        <path
+                            d="M480-400q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400ZM320-240h320v-23q0-24-13-44t-36-30q-26-11-53.5-17t-57.5-6q-30 0-57.5 6T369-337q-23 10-36 30t-13 44v23ZM740-80H220q-24 0-42-18t-18-42v-680q0-24 18-42t42-18h341l239 239v501q0 24-18 42t-42 18Zm0-60v-474L534-820H220v680h520Zm-520 0v-680 680Z" />
+                    </svg>
                 </a>
                 <dark-mode-toggle class="slider" appearance="toggle"></dark-mode-toggle>
             </aside>
